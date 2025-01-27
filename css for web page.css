@@ -1,0 +1,372 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #5a5438; }
+
+.container { width: 80%; margin: auto; overflow: hidden; }
+.container 
+{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  animation: active 2s finite;
+}
+.pics{
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: compatible 2s infinite;
+}
+
+.pics img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.pics {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.pics::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%);
+  border-top: 10px solid transparent;
+  border-right: 10px solid #333;
+  border-bottom: 10px solid transparent;
+}
+
+@keyframes compatible {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pics.sotable {
+  animation: sotable 2s infinite;
+}
+
+@keyframes sotable {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.pics.lentgth {
+  animation: lentgth 2s infinite;
+}
+
+@keyframes lentgth {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 120%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.pics.width {
+  animation: width 2s infinite;
+}
+
+@keyframes width {
+  0% {
+    height: 100%;
+  }
+  50% {
+    height: 120%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes active {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+header { background: #333; color: #fff; padding: 10px 0;}
+
+header .logo img 
+{ 
+    width: 150px;
+    border-radius:80px; }
+
+.name
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: fontColorAnimation 2s infinite;
+
+}
+nav li
+{
+    float:center;
+    margin-top: 100px;
+    border-radius: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    font-size: larger;
+    display: flow-root;
+
+    
+}
+
+nav ul { list-style: none; padding: 0; }
+
+nav ul li { display: inline; margin: 0 15px; }
+
+nav ul li a { color: #fff; text-decoration: none; }
+
+.icons a img { width: 25px; margin-left: 15px; }
+
+.hero { background: url('images/hero-bg.jpg') no-repeat center center/cover; color: #fff; padding: 50px 0; }
+
+.hero-image
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+.search-bar {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(200, end);
+  }
+  
+  .search-bar::after {
+    content: "";
+    animation: caret 1s infinite;
+  }
+.search-bar {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 300px;
+    padding: 8px;
+    background-color: #f2f2f2;
+    border: 0.2px solid #ab8b8b;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.search-bar input[type="search"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input[type="search"]:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+}
+    @keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes caret {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4s steps(10, end);
+}
+
+.name::after {
+  content: "";
+  animation: caret 2s infinite;
+}
+.hero-content {
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: active 5s infinite; 
+}
+
+.hero-content::after {
+  content: "";
+  animation: caret 1s infinite;
+}
+
+.search-bar button[type="submit"] {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: #415642;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+    animation: active cubic-bezier(0.23, 1, 0.320, 1) infinite;
+}
+
+.search-bar button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+.hero-content { text-align: center; }
+
+.hero-content h2 { font-size: 2.5em; }
+
+.hero-content p { font-size: 1.2em; }
+
+button 
+{ background: #e8491d; 
+  color: #fff;
+   border: none;
+   padding: 10px 20px;
+   cursor: pointer; }
+
+.deals { padding: 20px 0; background: #fff; }
+
+.deals-items { display: flex; justify-content: space-around;
+  display: flex; 
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  max-height: 500px;
+  cursor: pointer;
+  
+}
+
+.deal-item { background: #f4f4f4; padding: 10px; text-align: center; border-radius: 30px;}
+
+.deal-item img { width: 100%; border-radius: 30px;}
+
+footer { background: #333; color: #fff; text-align: center; padding: 10px 0; }
+
+footer ul { list-style: none; padding: 0; }
+
+footer ul li { display: inline; margin: 0 15px; }
+
+footer ul li a { color: #fff; text-decoration: none;
+}
+@keyframes fontAnimation {
+  0% {
+    font-size: 16px;
+  }
+  50% {
+    font-size: 20px;
+  }
+  100% {
+    font-size: 16px;
+  }
+}
+
+.name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 20px;
+  animation: fontAnimation 2s infinite;
+}
+
+.hero-content {
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 20px;
+  animation: fontAnimation 3s infinite;
+}
+
+.search-bar {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 20px;
+  animation: fontAnimation 2s infinite;
+}
+
+@keyframes fontColorAnimation {
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: #ccc;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
+.hero-content {
+  animation: fontColorAnimation 3s infinite;
+}
+
+.search-bar {
+  animation: fontColorAnimation 2s infinite;
+} }
+
+
+.container1 { width: 80%; margin: auto; position: fixed; overflow-y: scroll; }
